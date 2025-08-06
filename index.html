@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+     background-image: url(./flw.jpg) ; 
+     background-repeat: no-repeat;
+     
+     background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-box {
+      background:transparent;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px white;
+      width: 190px;
+      text-align: center;
+    }
+
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #1261ff;
+      border-radius: 5px;
+      outline-color: none;
+    }
+      input:hover {
+        border-color: #03c71d98;      
+        }
+         input:active{
+        border-color: #4803c798;      
+        }
+
+    button {
+      background: #007BFF;
+      color: white;
+      padding: 10px;
+      border: none;
+      width: 100%;
+      border-radius: 5px;
+      cursor: pointer;
+  transition: transform 0.1s ease, background 0.3s;
+} 
+h2 {
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+button:active {
+    background: #1c8a03;
+      color: white;
+  transform: scale(0.95);
+}
+
+    button:hover {
+      background: #099307;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Enter Username"  required/>
+    <input type="password" id="password" placeholder="Enter Password" required />
+    <button onclick="login()">Login</button>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+
+      // Hardcoded credentials
+      if (user === "Shalini" && pass === "Shalini@0308") {
+        // Redirect to next page
+        window.location.href = "main.html";
+      } else {
+        alert("Invalid Username or Password!");
+      }
+    }
+  </script>
+</body>
+</html>
